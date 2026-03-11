@@ -1,0 +1,15 @@
+{
+  "name": "antigravitycurse",
+  "version": "1.0.0",
+  "description": "Bienvenido al futuro del desarrollo colaborativo con IA. Este no es solo un curso, es una experiencia inmersiva donde aprenderás a dominar a **Antigravity**, tu agente de IA, para construir aplicaciones increíbles en tiempo record.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev --prefix dashboard",
+    "install-all": "npm install && npm install --prefix dashboard",
+    "build": "npm run build --prefix dashboard",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
