@@ -4,6 +4,7 @@ import { SESSIONS } from './data'
 import { Rocket, BookOpen, Terminal, CheckCircle2, Sparkles, Layout, Zap, ArrowRight, MessageSquare, ShieldCheck } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Routes, Route, Link } from 'react-router-dom'
+import PortfolioStefano from './components/PortfolioStefano'
 
 // --- DASHBOARD COMPONENT ---
 function Dashboard() {
@@ -33,8 +34,6 @@ function Dashboard() {
             <ShieldCheck className="w-4 h-4" />
             <span className="font-bold text-sm">¿Qué es Antigravity?</span>
           </button>
-
-          {/* Roadmap hidden per user request */}
 
           <p className="text-[10px] font-bold text-gray-500 tracking-widest uppercase mt-6 mb-2">Módulos</p>
           <div className="flex flex-col gap-2">
@@ -82,7 +81,6 @@ function Dashboard() {
 
       {/* MAIN CONTENT AREA */}
       <main className="flex-1 h-screen overflow-y-auto relative scroll-smooth bg-bg-primary">
-        {/* Background Decorative Gradients - v4 syntax */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/10 blur-[120px] -z-10 rounded-full animate-pulse" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-purple-600/5 blur-[100px] -z-10 rounded-full" />
 
@@ -139,43 +137,6 @@ function Dashboard() {
                 </section>
 
                 {/* Practical Concept */}
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="flex flex-col gap-6">
-                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">De MVP a Producto Escalamiento</h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      Antigravity es imbatible para crear **MVPs (Productos Mínimos Viables)** y herramientas internas en tiempo récord. Lo que antes tomaba semanas de configuración, aquí toma minutos.
-                    </p>
-                    <p className="text-gray-400 leading-relaxed">
-                      La clave es que no te quedas ahí. Conforme el proyecto crece, puedes usar al agente para refinar el código, añadir tests y escalar hacia arquitecturas más robustas y complejas.
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-6">
-                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Ecosistema Extendido (MCPs)</h3>
-                    <p className="text-gray-400 leading-relaxed text-sm">
-                      El agente no solo vive en tu código. Gracias a los MCPs, puede conectarse con el resto de tus herramientas de trabajo:
-                    </p>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-                        <span className="text-xs font-black text-indigo-400">NOTION</span>
-                        <p className="text-[10px] text-gray-500">Documentación automática y gestión de tareas desde el chat.</p>
-                      </div>
-                      <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-                        <span className="text-xs font-black text-indigo-400">N8N</span>
-                        <p className="text-[10px] text-gray-500">Automatizaciones de flujos de trabajo y webhooks complejos.</p>
-                      </div>
-                      <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-                        <span className="text-xs font-black text-indigo-400">POSTGRES</span>
-                        <p className="text-[10px] text-gray-500">Consulta y manipulación de bases de datos reales.</p>
-                      </div>
-                      <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col gap-2">
-                        <span className="text-xs font-black text-indigo-400">SLACK</span>
-                        <p className="text-[10px] text-gray-500">Reportes de estado y notificaciones automáticas.</p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                {/* Technical Recap */}
                 <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
                   <div className="p-6 rounded-2xl bg-black/40 border border-white/5">
                     <Terminal className="w-6 h-6 text-indigo-500 mb-4" />
@@ -336,10 +297,8 @@ function Dashboard() {
   )
 }
 
-import PortfolioStefano from './components/PortfolioStefano'
-
 // --- MAIN APP COMPONENT (ROUTER) ---
-function App() {
+export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
@@ -347,5 +306,3 @@ function App() {
     </Routes>
   )
 }
-
-export default App
