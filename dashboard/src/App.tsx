@@ -293,6 +293,33 @@ function App() {
                       </div>
                     </div>
                   </div>
+
+                  {/* Open Conversation Section - Only for Session 1 as a wrap-up */}
+                  {activeSession.id === "1" && (
+                    <motion.section
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      className="p-12 rounded-[40px] bg-indigo-500/[0.02] border border-indigo-500/10 flex flex-col gap-8 items-center text-center"
+                    >
+                      <div className="w-16 h-16 bg-indigo-500/10 rounded-full flex items-center justify-center mb-4">
+                        <MessageSquare className="w-8 h-8 text-indigo-400" />
+                      </div>
+                      <div className="flex flex-col gap-4 max-w-xl">
+                        <h3 className="text-2xl font-black text-white uppercase tracking-tight">💬 Conversación Abierta</h3>
+                        <p className="text-gray-400 leading-relaxed">
+                          Antes de terminar, tómate unos minutos para hablar conmigo. Pregúntame sobre el curso, las tecnologías que usaremos o cómo puedo ayudarte en tus propios proyectos.
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-4 text-xs font-mono text-indigo-400/60 uppercase tracking-widest font-bold">
+                        <span>Sin guion</span>
+                        <div className="w-1 h-1 bg-indigo-500/30 rounded-full"></div>
+                        <span>Sin límites</span>
+                        <div className="w-1 h-1 bg-indigo-500/30 rounded-full"></div>
+                        <span>Solo curiosidad</span>
+                      </div>
+                    </motion.section>
+                  )}
                 </div>
 
                 {/* VISUAL PREVIEW / WORKSPACE */}
