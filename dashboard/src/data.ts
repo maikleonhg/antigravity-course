@@ -20,7 +20,7 @@ export const SESSIONS: Session[] = [
         id: "1",
         title: "Calibración del Sistema",
         description: "Confirma que tu agente ha configurado todo correctamente analizando el README.",
-        introduction: "El agente ya ha clonado el repositorio y lanzado este dashboard. Ahora, usaremos la Sesión 1 para confirmar que el entorno cumple con los estándares del proyecto descritos en el Manifiesto (README).",
+        introduction: "El agente ya ha clonado el repositorio y lanzado este dashboard. Ahora, usaremos la Sesión 1 para confirmar que el entorno cumple con los estándares del proyecto y, lo más importante, ¡para que empieces a charlar con él!",
         folder: "sesiones/01-fundamentos",
         promptInstructions: "Pide al agente que lea el README raíz y genere un reporte STATUS.md comparando tu sistema actual con los requisitos solicitados en el archivo.",
         promptComponents: {

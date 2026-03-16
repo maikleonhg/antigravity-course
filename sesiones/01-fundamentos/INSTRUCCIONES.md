@@ -19,3 +19,6 @@ Utiliza la tarjeta de **Ingeniería de Prompts**. El objetivo es que el agente u
 
 ---
 *🎯 Objetivo: Entender que el agente puede usar archivos de documentación como manuales de instrucciones para configurar cualquier proyecto futuro.*
+
+## 💬 Conversación Abierta
+Antes de terminar esta sesión, tómate unos minutos para hablar con **Antigravity**. Pregúntale sobre la estructura del curso, qué tecnologías vamos a usar o cómo puede ayudarte en tus propios proyectos. No hay guion aquí, solo curiosidad.
