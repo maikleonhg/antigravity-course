@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import type { Session } from './data'
 import { SESSIONS } from './data'
-import { Rocket, BookOpen, Terminal, CheckCircle2, Sparkles, Layout, Zap, ArrowRight, MessageSquare, ShieldCheck } from 'lucide-react'
+import { Rocket, BookOpen, Terminal, CheckCircle2, Sparkles, Layout, Zap, ArrowRight, MessageSquare, ShieldCheck, Database } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Routes, Route, Link } from 'react-router-dom'
-import PortfolioStefano from './components/PortfolioStefano'
+
 
 // --- DASHBOARD COMPONENT ---
 function Dashboard() {
@@ -271,19 +271,43 @@ function Dashboard() {
                   )}
                 </div>
 
-                {/* PREVIEW PLACEHOLDER FOR SESSION 2 */}
-                {activeSession.id === "2" && (
+                {/* PREVIEW FOR SESSION 3 (NOTION MCP) */}
+                {activeSession.id === "3" && (
                   <section className="flex flex-col gap-8 mt-12">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Tu Espacio de Creación</h3>
-                    <div className="p-12 rounded-[40px] bg-white/[0.02] border border-white/5 text-center">
-                      <p className="text-gray-400 mb-6 italic">¡Ruta detectada perfectamente!</p>
+                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Motor de Generación</h3>
+                    <div className="p-12 rounded-[40px] bg-indigo-600/[0.02] border border-indigo-500/10 text-center relative overflow-hidden group">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 blur-3xl rounded-full group-hover:bg-indigo-500/20 transition-all"></div>
+                      <Database className="w-12 h-12 text-indigo-400 mx-auto mb-4 animate-pulse" />
+                      <p className="text-gray-400 mb-8 italic">Configurando el espejo digital para tus clientes de Notion.</p>
                       <div className="flex justify-center gap-4">
                         <Link
-                          to="/portafolio_stefano"
-                          className="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-bold shadow-lg shadow-indigo-600/20 transition-all flex items-center gap-2 group"
+                          to="/notion-client"
+                          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl text-sm font-bold shadow-xl shadow-indigo-600/30 transition-all flex items-center gap-2 group"
                         >
-                          Ver mi Portafolio <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          Generar Portafolio de Cliente <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
+                      </div>
+                    </div>
+                  </section>
+                )}
+                {activeSession.id === "2" && (
+                  <section className="flex flex-col gap-8 mt-12">
+                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Rutas de Sub-páginas (Crea el tuyo)</h3>
+                    <div className="p-12 rounded-[40px] bg-white/[0.02] border border-white/5 text-center">
+                      <p className="text-gray-400 mb-8 italic">Cada miembro del equipo tiene su propio espacio de creación.</p>
+                      <div className="flex flex-wrap justify-center gap-6">
+                        {[
+                          { name: "Portafolio Stefano", path: "/stefano" },
+                          { name: "Notion Project (MCP)", path: "/notion-client" },
+                        ].map((link) => (
+                          <Link
+                            key={link.path}
+                            to={link.path}
+                            className="px-6 py-4 bg-white/5 hover:bg-indigo-600 border border-white/10 hover:border-indigo-500 text-white rounded-2xl text-sm font-bold transition-all flex items-center gap-3 group"
+                          >
+                            {link.name} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   </section>
@@ -297,12 +321,17 @@ function Dashboard() {
   )
 }
 
+// Portfolios
+import PortfolioStefano from './components/PortfolioStefano'
+import PortfolioTeam from './components/PortfolioTeam'
+
 // --- MAIN APP COMPONENT (ROUTER) ---
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/portafolio_stefano" element={<PortfolioStefano />} />
+      <Route path="/stefano" element={<PortfolioStefano />} />
+      <Route path="/notion-client" element={<PortfolioTeam />} />
     </Routes>
   )
 }

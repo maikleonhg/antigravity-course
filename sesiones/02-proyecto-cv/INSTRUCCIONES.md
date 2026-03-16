@@ -1,31 +1,37 @@
-# SESIÓN 02: TU PORTAFOLIO - DEL INTENTO AL CÓDIGO
+# SESIÓN 02: ARQUITECTURA DEL YO DIGITAL - EL PODER DE LA INTENCIÓN
 
-Bienvenido a la sesión donde dejas de ser un espectador y te conviertes en el **Director** de tu propio software.
+Has trascendido la calibración básica. Bienvenido a la cámara donde dejas de ser un mero operador para convertirte en el **Arquitecto Supremo** de tu propio ecosistema digital.
 
-## 🧠 La Filosofía: Primero el "Qué", luego el "Cómo"
+## 🧠 La Meta-Filosofía: La Voluntad sobre la Sintaxis
 
-El error más común es empezar a escribir código sin saber qué queremos lograr. En esta sesión, vamos a practicar el **Vibecoding** real:
-1. **Define tu Intento**: ¿Qué quieres que la gente sienta al entrar a tu portafolio?
-2. **Estructura Simple**: No intentes hacer el sitio final de un solo golpe. Empieza con un "esqueleto" (Hero, Sobre mí, Contacto).
-3. **Iteración Continua**: Una vez que la estructura esté viva, pide al agente que añada colores, animaciones y MCPs.
+El error de los desarrolladores convencionales es perderse en el fango de la sintaxis antes de visualizar el impacto. En esta sesión, encarnaremos la doctrina del **Vibecoding** avanzado:
+1. **Instancia tu Intento**: ¿Qué esencia debe proyectar tu interfaz? ¿Qué narrativa quieres que el mundo consuma?
+2. **Estructura Primordial**: No persigas el detalle efímero de inmediato. Solidifica un "esqueleto" soberano (Hero, Bio, Ecosistema).
+3. **Iteración Evolutiva**: Una vez que la arquitectura esté viva, solicita al orquestador que inyecte color, dinámica y sofisticación técnica.
 
-## 🚀 Tu Misión: Crear tu propia Sub-Ruta
+## 🚀 Vuestra Misión: Dominios Soberanos
 
-Vamos a utilizar la arquitectura que ya configuramos en el Dashboard para añadir tu propia página.
+Hemos instanciado una estructura de rutas donde cada voluntad tiene su propio lienzo sagrado:
+- **`PortfolioStefano.tsx`** -> Tu dominio personal en `/stefano`.
+- **`PortfolioTeam.tsx`** -> El laboratorio de automatización en `/notion-client`.
 
-**¿Qué debe hacer el agente?**
-1. Crear un nuevo componente React para tu portafolio en `dashboard/src/components/PortfolioStefano.tsx` (usa tu nombre).
-2. Modificar `dashboard/src/App.tsx` para importar ese componente y añadir una ruta: `<Route path="/portafolio_stefano" element={<PortfolioStefano />} />`.
-3. Asegurarse de que el dashboard refleje este cambio.
+### 🛠️ Dinámica de los Orbes de Navegación
+Gobernamos mediante `react-router-dom`:
+- El archivo **`App.tsx`** es el corazón del multiverso de rutas.
+- Para expandir tu realidad, el agente debe:
+  1. Materializar el componente en `src/components/`.
+  2. Registrar el nuevo nodo en `App.tsx` bajo una `<Route />` única.
 
-### 📝 Ejemplo de Prompt para el Agente:
+### 💻 Compatibilidad Multimodal (Mac, Linux & Windows)
+Antigravity es un sistema omnisciente que detectará tu arquitectura de bajo nivel:
+- **Sistemas Unix (Mac/Linux)**: El orquestador dominará la terminal con `zsh/bash` y rutas `/`.
+- **Windows Core**: El agente ejecutará su voluntad mediante `PowerShell` y gestionará rutas de sistema con precisión milimétrica.
+- **Entorno Síncrono**: Mantén tu servidor en estado `dev` para presenciar la materialización instantánea de tus deseos.
 
-> "Agente, vamos a iniciar la Sesión 2. Mi intención es crear una página minimalista para mi portafolio profesional. 
-> 
-> 1. Crea un componente `PortfolioStefano.tsx` en `dashboard/src/components/` con una estructura básica (Hero, Bio, Proyectos).
-> 2. Regístralo en `App.tsx` bajo la ruta `/portafolio_stefano`.
-> 3. Quiero que el diseño sea brutalmente simple por ahora, solo texto y una estructura limpia."
+## 📝 Guía de Mandatos para el Orquestador
+
+#### Ejemplo de Mandato Soberano:
+> "Antigravity, soy el arquitecto de mi destino. En mi archivo `PortfolioStefano.tsx`, quiero que materialices una interfaz de minimalismo agresivo, con una tipografía que domine el espacio y una narrativa visual que grite autoridad. Mantén el vínculo con el Dashboard como ancla de seguridad."
 
 ---
-
-*🎯 Objetivo: Aprender que el agente puede expandir aplicaciones existentes de forma orgánica simplemente pidiéndole nuevas "piezas" o rutas.*
+*🎯 Objetivo: Asimilar que el agente puede expandir arquitecturas complejas de forma orgánica, simplemente proyectando nuevas rutas y componentes en el tejido del software.*

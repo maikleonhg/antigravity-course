@@ -1,22 +1,37 @@
-# 🚀 SESIÓN 03: MAESTRÍA AVANZADA Y DESPLIEGUE
+# SESIÓN 03: SINERGIA AUTOMATIZADA - EL ESPEJO DEL CLIENTE
 
-Has llegado al final del viaje táctico. Tu marca personal es imponente, pero un código que no vive en producción no existe.
+Bienvenido a la cúspide de la orquestación. En esta fase, trascenderás la creación de portafolios propios para convertirte en el **Arquitecto de Identidades Ajenas**. 
 
-## 🎯 Tu Misión: El Lanzamiento Orbital
-Llevaremos tu proyecto de React al mundo real usando procesos de integración y despliegue continuo (CI/CD).
+## 🧠 La Misión: La Clonación Digital del Cliente
 
-### 🛠️ LABORATORIO AGENTE: Preparación para el Vacío
+Tu objetivo no es solo conectar código con datos; es crear una **máquina de generación de portafolios**. Utilizaremos el servidor **Notion MCP** para realizar una extracción quirúrgica de información de la base de datos oficial.
 
-#### Paso 1: Optimización de Energía
-Asegúrate de que tu proyecto en `sesiones/02-proyecto-cv/` esté listo. 
+- **Origen**: Base de Datos `@Seguimiento ingresados`.
+- **Destino**: `PortfolioTeam.tsx` (que a partir de ahora será nuestro **Motor de Visualización de Clientes**).
 
-#### Paso 2: El Prompt de Lanzamiento
-Copia este comando:
+## 🚀 El Flujo de Omnisciencia
 
-> "Antigravity, mi proyecto de landing page está listo para el mundo. Ayúdame a prepararlo para producción. Necesito que revises el build, optimices los activos y me generes un flujo de trabajo de GitHub Actions para desplegar automáticamente en Netlify o Vercel cada vez que haga un push. Explícame cada paso como si fuera el lanzamiento de un cohete."
-
-### Paso 3: La Última Frontera
-Una vez configurado, pide al agente que te ayude a añadir un dominio personalizado o que realice una auditoría de SEO final para que tu marca aparezca en los radares de Google.
+1. **Invocación del Registro**: El agente debe localizar a un cliente específico dentro de la base de datos de seguimiento.
+2. **Decodificación de Perfil**: Extraeremos su nombre, rol, biografía y catálogo de proyectos directamente desde las propiedades de Notion.
+3. **Materialización Instantánea**: Antigravity inyectará esos datos en el componente React, adaptando la estética al perfil del cliente para generar un portafolio listo para ser entregado.
 
 ---
-*🏆 ¡Felicidades! Has completado el Antigravity Metacourse. Ahora eres un Director de IA certificado por la práctica.*
+
+## 📝 Mandatos de Orquestación Avanzada
+
+Para esta sesión, el agente debe actuar como un intermediario de datos inteligente.
+
+#### Ejemplo de Mandato de Extracción:
+> "Antigravity, activa el protocolo de Sesión 3. Accede a la base de datos '@Seguimiento ingresados' en Notion. Identifica al cliente 'Nombre del Cliente' y estudia su perfil. Quiero que transformes `PortfolioTeam.tsx` en su portafolio profesional personal, usando toda la información de proyectos y habilidades que encuentres en su fila."
+
+#### Ejemplo de Mandato de Diseño Adaptativo:
+> "Ahora que tienes los datos, ajusta la estética. Si el cliente es de perfil técnico, usa una paleta oscura y minimalista. Si es creativo, inyecta dinamismo y colores vibrantes. Todo esto debe ocurrir dentro de `PortfolioTeam.tsx`."
+
+---
+
+### � Recordatorio de Soberanía (Plataformas)
+Ya seas un arquitecto en **Mac**, **Linux** o **Windows**, el orquestador adaptará su sintaxis de comandos para asegurar que la conexión con Notion y la escritura de archivos sea impecable.
+
+---
+
+*🎯 Objetivo Final: Dominar la automatización de alto nivel, donde una simple fila en Notion se convierte en un producto de software terminado gracias a la dirección agéntica.*
