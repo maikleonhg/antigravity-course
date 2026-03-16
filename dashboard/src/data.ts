@@ -32,15 +32,15 @@ export const SESSIONS: Session[] = [
     },
     {
         id: "2",
-        title: "Vende tu Marca Personal",
-        description: "Crea una Landing Page premium basada en tu CV con estética Glassmorphism.",
-        introduction: "Ahora que el sistema está verificado, vamos a subir el nivel. Construiremos una presencia digital que destaque usando tecnologías modernas.",
+        title: "Tu Portafolio: Del Intento al Código",
+        description: "Aprende a definir tu intención clara antes de construir tu propia subpágina personal.",
+        introduction: "En esta sesión entenderás que programar no es escribir líneas, sino definir intenciones. Usaremos este mismo dashboard para crear una subpágina personalizada (ej. /mi-perfil) donde empezarás a construir tu marca personal de forma incremental.",
         folder: "sesiones/02-proyecto-cv",
-        promptInstructions: "Diseña un prompt que describa la estética que buscas. Menciona React, Tailwind CSS v4 y el concepto de Glassmorphism.",
+        promptInstructions: "Define tu perfil (¿quién eres? ¿qué haces?) y pídele al agente que cree un componente para una nueva ruta en el dashboard. Empieza por una estructura básica y luego iteraremos en el diseño.",
         promptComponents: {
-            context: "Sesión 2, trabajando en sesiones/02-proyecto-cv/.",
-            action: "Genera una Landing Page completa usando React, Vite y Framer Motion.",
-            style: "Usa estética Glassmorphism (cristal), colores oscuros premium e interacciones fluidas."
+            context: "Trabajando en la Sesión 2, dentro del proyecto dashboard/.",
+            action: "Crea una nueva ruta en el router (ej: /portafolio) y un componente para mi página personal con una estructura básica de: Herp, Sobre mí y Proyectos.",
+            style: "Limpio y profesional. No te preocupes por los detalles visuales finales ahora, enfoquémonos en que la estructura sea correcta."
         },
         completed: false
     },

@@ -3,16 +3,14 @@ import type { Session } from './data'
 import { SESSIONS } from './data'
 import { Rocket, BookOpen, Terminal, CheckCircle2, Sparkles, Layout, Zap, ArrowRight, MessageSquare, ShieldCheck } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Routes, Route, Link } from 'react-router-dom'
 
-// --- DASHBOARD COMPONENT ---
-function Dashboard() {
+function App() {
   const [activeSession, setActiveSession] = useState<Session>(SESSIONS[0])
   const [view, setView] = useState<'content' | 'about'>('content')
 
   return (
     <div className="flex w-full h-screen text-white bg-bg-primary overflow-hidden font-sans">
-      {/* SIDEBAR */}
+      {/* SIDEBAR - Non-fixed for better flow */}
       <aside className="w-80 h-full bg-bg-sidebar border-r border-white/10 p-8 flex flex-col gap-10 z-30 shrink-0">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-indigo-600 rounded-2xl shadow-[0_0_20px_rgba(79,70,229,0.3)]">
@@ -102,7 +100,7 @@ function Dashboard() {
                     ¿Qué es Antigravity?
                   </h2>
                   <p className="text-2xl text-gray-400 font-light max-w-3xl leading-relaxed">
-                    Es un entorno de co-programación donde tú diriges software mediante lenguaje natural. El agente tiene permiso para leer tus archivos, ejecutar comandos y crear carpetas localmente.
+                    Es un entorno de co-programación donde tú dejas de escribir código línea por línea y pasas a dirigir software mediante lenguaje natural. No es solo un chat; es un agente que tiene permiso para leer tus archivos, ejecutar comandos y crear carpetas en tu propia computadora.
                   </p>
                 </header>
 
@@ -111,14 +109,14 @@ function Dashboard() {
                   <div className="flex flex-col gap-6">
                     <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Vibecoding: Programa a la velocidad de tu idea</h3>
                     <p className="text-gray-400 leading-relaxed text-lg">
-                      Se llama "Vibecoding" porque el flujo de trabajo se basa en la intención. En lugar de pelearte con la sintaxis, hablas con el agente sobre el resultado.
+                      Se llama "Vibecoding" porque el flujo de trabajo se basa en la "vibe" o la intención. En lugar de pelearte con la sintaxis de un lenguaje, hablas con el agente sobre el resultado que quieres ver.
                     </p>
                     <ul className="flex flex-col gap-4">
                       {[
                         "Tú defines la lógica y el diseño.",
                         "El agente escribe el código real por ti.",
-                        "La iteración es instantánea.",
-                        "No necesitas memorizar librerías."
+                        "La iteración es instantánea: corriges hablando.",
+                        "No necesitas memorizar librerías, solo saber qué quieres lograr."
                       ].map((item, i) => (
                         <li key={i} className="flex items-center gap-3 text-sm text-gray-300">
                           <CheckCircle2 className="w-4 h-4 text-indigo-500" /> {item}
@@ -128,12 +126,12 @@ function Dashboard() {
                   </div>
                   <div className="bg-white/[0.02] border border-white/10 rounded-[32px] p-8 flex flex-col justify-center gap-6">
                     <div className="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl">
-                      <p className="text-xs font-mono text-indigo-400 mb-2 uppercase tracking-widest font-bold">Antes (Tradicional)</p>
-                      <p className="text-sm text-gray-500">Idea {"->"} Tutorial {"->"} Dependencias {"->"} Debug {"->"} Código.</p>
+                      <p className="text-xs font-mono text-indigo-400 mb-2 uppercase tracking-widest font-bold">Antes (Desarrollo Tradicional)</p>
+                      <p className="text-sm text-gray-500">Idea {"->"} Buscar tutorial {"->"} Instalar dependencias {"->"} Debuggear errores {"->"} Código.</p>
                     </div>
                     <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-2xl">
                       <p className="text-xs font-mono text-green-400 mb-2 uppercase tracking-widest font-bold">Hoy (Vibecoding)</p>
-                      <p className="text-sm text-gray-300">Idea {"->"} Prompt {"->"} Resultado {"->"} Ajustar {"->"} Listo.</p>
+                      <p className="text-sm text-gray-300">Idea {"->"} Prompt al Agente {"->"} Ver Resultado {"->"} Ajustar {"->"} Listo.</p>
                     </div>
                   </div>
                 </section>
@@ -176,21 +174,29 @@ function Dashboard() {
                 </section>
 
                 {/* Technical Recap */}
-                <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                  <div className="p-6 rounded-2xl bg-black/40 border border-white/5">
-                    <Terminal className="w-6 h-6 text-indigo-500 mb-4" />
-                    <p className="text-sm font-bold text-white mb-2">Terminal</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">Ejecuta comandos reales.</p>
+                <section className="p-12 rounded-[40px] bg-white/[0.02] border border-white/5 flex flex-col gap-10">
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-xl font-black text-white uppercase tracking-tight">¿Cómo funciona técnicamente?</h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      Antigravity funciona como un "puente" entre tu intención y tu sistema. Utiliza el protocolo **MCP** para que la IA actúe como un operario real:
+                    </p>
                   </div>
-                  <div className="p-6 rounded-2xl bg-black/40 border border-white/5">
-                    <Layout className="w-6 h-6 text-indigo-500 mb-4" />
-                    <p className="text-sm font-bold text-white mb-2">Editor</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">Lee/Escribe archivos.</p>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-black/40 border border-white/5">
-                    <Zap className="w-6 h-6 text-indigo-500 mb-4" />
-                    <p className="text-sm font-bold text-white mb-2">Integración</p>
-                    <p className="text-xs text-gray-500 leading-relaxed">Conecta con tus herramientas.</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="p-6 rounded-2xl bg-black/40 border border-white/5">
+                      <Terminal className="w-6 h-6 text-indigo-500 mb-4" />
+                      <p className="text-sm font-bold text-white mb-2">Terminal</p>
+                      <p className="text-xs text-gray-500 leading-relaxed">Ejecuta procesos, instala librerías y corre diagnósticos.</p>
+                    </div>
+                    <div className="p-6 rounded-2xl bg-black/40 border border-white/5">
+                      <Layout className="w-6 h-6 text-indigo-500 mb-4" />
+                      <p className="text-sm font-bold text-white mb-2">Sistema de Archivos</p>
+                      <p className="text-xs text-gray-500 leading-relaxed">Lee y escribe código directamente en tu proyecto local.</p>
+                    </div>
+                    <div className="p-6 rounded-2xl bg-black/40 border border-white/5">
+                      <Zap className="w-6 h-6 text-indigo-500 mb-4" />
+                      <p className="text-sm font-bold text-white mb-2">Integraciones</p>
+                      <p className="text-xs text-gray-500 leading-relaxed">Conecta con APIs externas para automatizar todo el flujo.</p>
+                    </div>
                   </div>
                 </section>
               </motion.div>
@@ -234,9 +240,9 @@ function Dashboard() {
                   {/* Quick Tips */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {[
-                      { icon: <Layout className="w-4 h-4" />, text: "Abre Antigravity localmente." },
-                      { icon: <MessageSquare className="w-4 h-4" />, text: "Habla con el agente." },
-                      { icon: <Zap className="w-4 h-4" />, text: "Itera sobre el resultado." }
+                      { icon: <Layout className="w-4 h-4" />, text: "Abre Antigravity en la carpeta del proyecto." },
+                      { icon: <MessageSquare className="w-4 h-4" />, text: "Escribe el comando usando lenguaje claro." },
+                      { icon: <Zap className="w-4 h-4" />, text: "Mira cómo el agente trabaja en tu terminal." }
                     ].map((tip, i) => (
                       <div key={i} className="flex flex-col gap-3 p-6 bg-white/[0.02] border border-white/5 rounded-2xl">
                         <div className="text-indigo-500">{tip.icon}</div>
@@ -245,7 +251,7 @@ function Dashboard() {
                     ))}
                   </div>
 
-                  {/* Instructions Card (Laboratorio Agente) */}
+                  {/* Instructions Card (Laboratorio Agente) - Now teaching Prompt Engineering */}
                   <div className="glass-card p-12 flex flex-col gap-10 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 blur-3xl rounded-full" />
 
@@ -281,7 +287,6 @@ function Dashboard() {
                         <p className="text-sm text-gray-400">Une estas partes y envíalas al agente mencionando que estás en <code>{activeSession.folder}</code>.</p>
                       </div>
 
-                      {/* Folder Indicator */}
                       <div className="flex items-center justify-between p-5 bg-black/20 rounded-2xl border border-white/5 text-gray-500 font-mono text-xs">
                         <span className="flex items-center gap-2"><Layout className="w-3 h-3" /> {activeSession.folder}</span>
                         <ArrowRight className="w-4 h-4 opacity-30" />
@@ -289,7 +294,7 @@ function Dashboard() {
                     </div>
                   </div>
 
-                  {/* Open Conversation Section for Session 1 */}
+                  {/* Open Conversation Section - Only for Session 1 as a wrap-up */}
                   {activeSession.id === "1" && (
                     <motion.section
                       initial={{ opacity: 0, y: 20 }}
@@ -301,28 +306,42 @@ function Dashboard() {
                         <MessageSquare className="w-8 h-8 text-indigo-400" />
                       </div>
                       <div className="flex flex-col gap-4 max-w-xl">
-                        <h3 className="text-2xl font-black text-white uppercase tracking-tight">💬 Conversación Abierta</h3>
+                        <h3 className="text-2xl font-black text-white uppercase tracking-tight">💬 Conversación Abierta con el agente</h3>
                         <p className="text-gray-400 leading-relaxed">
-                          Antes de continuar, habla con el agente. Pregúntale sobre el curso o cómo puede ayudarte en tus proyectos.
+                          Antes de continuar, tómate unos minutos para hablar con el agente. Pregúntale sobre el curso, las tecnologías que usaremos o cómo puede ayudarte en tus propios proyectos.
                         </p>
+                      </div>
+                      <div className="flex items-center gap-4 text-xs font-mono text-indigo-400/60 uppercase tracking-widest font-bold">
+                        <span>Sin guion</span>
+                        <div className="w-1 h-1 bg-indigo-500/30 rounded-full"></div>
+                        <span>Sin límites</span>
+                        <div className="w-1 h-1 bg-indigo-500/30 rounded-full"></div>
+                        <span>Solo curiosidad</span>
                       </div>
                     </motion.section>
                   )}
                 </div>
 
-                {/* PREVIEW PLACEHOLDER FOR SESSION 2 */}
+                {/* VISUAL PREVIEW / WORKSPACE */}
                 {activeSession.id === "2" && (
-                  <section className="flex flex-col gap-8 mt-12">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">Tu Espacio de Creación</h3>
-                    <div className="p-12 rounded-[40px] bg-white/[0.02] border border-white/5 text-center">
-                      <p className="text-gray-400 mb-6 italic">¡Ruta detectada perfectamente!</p>
-                      <div className="flex justify-center gap-4">
-                        <Link
-                          to="/portafolio_stefano"
-                          className="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-bold shadow-lg shadow-indigo-600/20 transition-all flex items-center gap-2 group"
-                        >
-                          Ver mi Portafolio <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                  <section className="flex flex-col gap-8">
+                    <div className="flex items-center justify-between px-2">
+                      <h3 className="text-4xl font-black tracking-tight text-white uppercase">VISTA PREVIA</h3>
+                      <div className="flex items-center gap-3">
+                        <span className="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
+                        <span className="text-[10px] font-black uppercase tracking-widest text-green-500">Workspace Activo</span>
+                      </div>
+                    </div>
+                    <div className="relative group">
+                      <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-[50px] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                      <div className="relative aspect-video w-full rounded-[48px] bg-[#0d0d10] border-8 border-[#1a1a20] flex items-center justify-center overflow-hidden shadow-2xl">
+                        <div className="text-center flex flex-col gap-4 p-12">
+                          <Sparkles className="w-12 h-12 text-gray-800 mx-auto animate-pulse" />
+                          <p className="text-gray-500 font-bold uppercase tracking-[0.4em] text-xs">Awaiting Generation</p>
+                          <p className="text-gray-600 max-w-sm mx-auto text-sm font-light">
+                            Una vez que Antigravity genere los archivos en <code>sesiones/02-proyecto-cv/</code>, este panel se actualizará automáticamente.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </section>
@@ -333,18 +352,6 @@ function Dashboard() {
         </div>
       </main>
     </div>
-  )
-}
-
-import PortfolioStefano from './components/PortfolioStefano'
-
-// --- MAIN APP COMPONENT (ROUTER) ---
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/portafolio_stefano" element={<PortfolioStefano />} />
-    </Routes>
   )
 }
 

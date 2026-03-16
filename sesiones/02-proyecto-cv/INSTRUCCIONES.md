@@ -1,29 +1,31 @@
-# 💎 SESIÓN 02: MARCA PERSONAL PREMIUM
+# SESIÓN 02: TU PORTAFOLIO - DEL INTENTO AL CÓDIGO
 
-## 🎯 Tu Misión: Wappear al Universo
-En esta sesión, dejaremos de lado los scripts de consola para construir algo visualmente imponente: Una Landing Page con estética **Glassmorphism (Efecto Cristal)** que será tu nueva carta de presentación al mundo.
+Bienvenido a la sesión donde dejas de ser un espectador y te conviertes en el **Director** de tu propio software.
 
-### 🎨 Arquitectura del Diseño Maestro
-Para lograr el efecto "Premium", exigiremos a Antigravity:
-- **Hero Section:** Gradientes líquidos animados y tipografía masiva (Outfit/Inter).
-- **Glassmorphism:** Tarjetas con desenfoque de fondo (`backdrop-blur`) y bordes sutiles.
-- **Micro-interacciones:** Hover effects con Framer Motion que hagan sentir la interfaz "viva".
+## 🧠 La Filosofía: Primero el "Qué", luego el "Cómo"
+
+El error más común es empezar a escribir código sin saber qué queremos lograr. En esta sesión, vamos a practicar el **Vibecoding** real:
+1. **Define tu Intento**: ¿Qué quieres que la gente sienta al entrar a tu portafolio?
+2. **Estructura Simple**: No intentes hacer el sitio final de un solo golpe. Empieza con un "esqueleto" (Hero, Sobre mí, Contacto).
+3. **Iteración Continua**: Una vez que la estructura esté viva, pide al agente que añada colores, animaciones y MCPs.
+
+## 🚀 Tu Misión: Crear tu propia Sub-Ruta
+
+Vamos a utilizar la arquitectura que ya configuramos en el Dashboard para añadir tu propia página.
+
+**¿Qué debe hacer el agente?**
+1. Crear un nuevo componente React para tu portafolio en `dashboard/src/components/PortfolioStefano.tsx` (usa tu nombre).
+2. Modificar `dashboard/src/App.tsx` para importar ese componente y añadir una ruta: `<Route path="/portafolio_stefano" element={<PortfolioStefano />} />`.
+3. Asegurarse de que el dashboard refleje este cambio.
+
+### 📝 Ejemplo de Prompt para el Agente:
+
+> "Agente, vamos a iniciar la Sesión 2. Mi intención es crear una página minimalista para mi portafolio profesional. 
+> 
+> 1. Crea un componente `PortfolioStefano.tsx` en `dashboard/src/components/` con una estructura básica (Hero, Bio, Proyectos).
+> 2. Regístralo en `App.tsx` bajo la ruta `/portafolio_stefano`.
+> 3. Quiero que el diseño sea brutalmente simple por ahora, solo texto y una estructura limpia."
 
 ---
 
-## 🛠️ LABORATORIO AGENTE: El Manifiesto Visual
-
-### Paso 1: Preparación del Terreno
-Asegúrate de que estás en la carpeta `sesiones/02-proyecto-cv/`.
-
-### Paso 2: El Prompt Maestro (Manifestación)
-Copia y pega este prompt épico:
-
-> "Antigravity, es hora de la Sesión 2. Quiero manifestar mi Landing Page de marca personal aquí mismo. Crea un proyecto completo usando Vite, React y Tailwind CSS v4. La estética debe ser 'Ultra-Dark Premium' con Glassmorphism. Usa Framer Motion para animaciones de entrada fluidas. Estructúralo con: Hero, Bento Grid de Proyectos, y Footer. El diseño debe respirar lujo técnico."
-
-### Paso 3: Refinamiento Estético
-Una vez construido, no te conformes. Dile:
-> "Añade un efecto de grano (noise) muy sutil al fondo y haz que las tarjetas de la Bento Grid tengan un resplandor (glow) de color índigo al pasar el cursor."
-
----
-*✨ Previsualización: Una vez que el agente genere los archivos, la ventana de PREVIEW en el dashboard cobrará vida.*
+*🎯 Objetivo: Aprender que el agente puede expandir aplicaciones existentes de forma orgánica simplemente pidiéndole nuevas "piezas" o rutas.*
