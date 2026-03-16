@@ -1,14 +1,22 @@
-# Sesión 03: Maestría Avanzada 🚀
+# 🚀 SESIÓN 03: MAESTRÍA AVANZADA Y DESPLIEGUE
 
-El último paso del viaje. Automatización y despliegue.
+Has llegado al final del viaje táctico. Tu marca personal es imponente, pero un código que no vive en producción no existe.
 
-## Tu Misión
-Llevar tu proyecto al mundo real.
+## 🎯 Tu Misión: El Lanzamiento Orbital
+Llevaremos tu proyecto de React al mundo real usando procesos de integración y despliegue continuo (CI/CD).
 
-## Instrucciones para el Agente
-> "Antigravity, mi proyecto de landing page está listo. Ayúdame a prepararlo para producción y explícame cómo puedo desplegarlo en Netlify o Vercel usando GitHub Actions."
+### 🛠️ LABORATORIO AGENTE: Preparación para el Vacío
 
-## Objetivos
-- [ ] Optimizar el build.
-- [ ] Configurar acciones de despliegue.
-- [ ] Finalizar el curso.
+#### Paso 1: Optimización de Energía
+Asegúrate de que tu proyecto en `sesiones/02-proyecto-cv/` esté listo. 
+
+#### Paso 2: El Prompt de Lanzamiento
+Copia este comando:
+
+> "Antigravity, mi proyecto de landing page está listo para el mundo. Ayúdame a prepararlo para producción. Necesito que revises el build, optimices los activos y me generes un flujo de trabajo de GitHub Actions para desplegar automáticamente en Netlify o Vercel cada vez que haga un push. Explícame cada paso como si fuera el lanzamiento de un cohete."
+
+### Paso 3: La Última Frontera
+Una vez configurado, pide al agente que te ayude a añadir un dominio personalizado o que realice una auditoría de SEO final para que tu marca aparezca en los radares de Google.
+
+---
+*🏆 ¡Felicidades! Has completado el Antigravity Metacourse. Ahora eres un Director de IA certificado por la práctica.*
